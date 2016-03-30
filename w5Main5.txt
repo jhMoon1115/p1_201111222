@@ -8,15 +8,15 @@ start
 :user input marks;
 
 
-if(marks<100 and marks>90) then(yes)
+if(marks<=100 and marks>=90) then(yes)
     :grade is A;
-elseif(marks<=90 and marks>80) then(yes)
+elseif(80<=marks<90) then(yes)
     :grade is B;
-elseif(marks<=80 and marks>60) then(yes)
+elseif(60<=marks<80) then(yes)
     :grade is C;
-elseif(marks<=60 and marks>40) then(yes)
+elseif(40<=marks<60) then(yes)
     :grade is D;
-elseif(marks<=40 and marks>0) then(yes)
+elseif(0<=marks<40) then(yes)
     :grade is F;
 else
     :print error;
