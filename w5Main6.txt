@@ -1,0 +1,36 @@
+﻿@startuml
+
+title Activity Diagram 
+
+
+start
+
+:user1 input (rock | scissors | paper);
+:user2 input (rock | scissors | paper);
+
+
+if(user1's input == user2'input) then(yes)
+    :draw;
+elseif(user1's input == rock) then(yes)
+    if(user2's input == scissors)
+        :user1 win;
+    else
+        :user1 lose;
+    endif
+elseif(user1's input == scissors) then(yes)
+    if(user2's input == paper)
+        :user1 win;
+    else
+        :user1 lose;
+    endif
+elseif(user1's input == paper) then(yes)
+    if(user2's input == rock)
+        :user1 win;
+    else
+        :user1 lose;
+    endif
+else
+    :print error;
+endif
+
+:print result;
