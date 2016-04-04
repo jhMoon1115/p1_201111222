@@ -50,7 +50,7 @@ def computeBMI(weight, height) :
 		print "low weight"
 	elif bmi>=18.5 and bmi<23 :
 		print "normal weight"
-	elif bmi>23 :
+	elif bmi>=23 :
 		print "over weight"
 	else :
 		print "error"
