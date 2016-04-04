@@ -1,0 +1,26 @@
+﻿@startuml
+
+title BMI - Activity Diagram 
+
+
+start
+
+:input user's weight(m); 
+
+:input user's height(kg); 
+
+:calculate BMI;
+
+if (BMI < 18.5) then (yes)
+  :저체중;
+else if(18.5<= BMI<23.0)
+    :정상체중;
+else if(BMI>=23)
+    :과체중;
+endif
+
+:print result;
+
+stop
+
+@enduml
