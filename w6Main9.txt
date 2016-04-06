@@ -1,0 +1,21 @@
+﻿@startuml
+
+title Multiples 3 and 5 - Activity Diagram 
+
+
+start
+:num is 1;
+:result is 0;
+repeat
+    if (Is num multiple of 3?) then(yes)
+        :sum num to result;
+    else if(Is num multiple of 5?) then(yes)
+        :sum num to result;
+    endif
+    :num increases 1;
+repeat while (num is under 1000?)
+
+:print result;
+stop
+
+@enduml
