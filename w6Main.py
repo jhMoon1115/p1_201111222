@@ -52,9 +52,43 @@ def isLeapYear(year) :
 		return 1
 	return 0
 
+def upAndDownGame(answer) :
+	"""
+	check answer is bigger than proposal function
+	
+	parameters
+	----------
+	arg1 : int
+		answer
+
+	returns
+	-------
+	int
+		cnt
+
+	Examples
+	--------
+	upAndDownGame(56)
+	"""
+	cnt=0
+	while True :
+		cnt+=1
+		input=int(raw_input("input positive integer : "))
+		if answer>input :
+			print "Up"
+		elif answer<input :
+			print "Down"
+		else :
+			print "Correct Answer"
+			break
+	return cnt
+
 def lab6() :
 	sum=sumMultiplesOf3And5(1, 1000)
 	print "Main 9, Sum of Multiples of 3 and 5 : {0:d}".format(sum)
+
+
+def lab6_1() :
 	print "\nMain11"
 	year=int(raw_input("input year : "))
 	re=isLeapYear(year)
@@ -63,8 +97,15 @@ def lab6() :
 	else :
 		print "{0:d} is not Leap Year".format(year)
 
+def lab6_2() :
+	print "\nUp and Down Game"
+	answer=int(raw_input("input one number"))
+	print "You get the right answer at {0:d} times.".format(upAndDownGame(answer))
+
 def main() :
 	lab6()
+	lab6_1()
+	lab6_2()
 
 if __name__=="__main__" :
 	main()
