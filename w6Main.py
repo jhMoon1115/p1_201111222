@@ -1,15 +1,30 @@
-﻿def sumMultiplesOf3And5() :
+﻿"""
+@author mjh
+@since 0406
+"""
+
+def sumMultiplesOf3And5() :
+	"""
+	Main 9
+	sum Multiples of 3 and 5 function
+
+	parameters
+	----------
+	none
+
+	Returns
+	-------
+	sum of multiples of 3 and 5
+
+	Examples
+	--------
+	sumMultiplesOf3And5()
+	"""
 	sum=0
 	for i in range(1, 1001) :
 		if(i%3==0 or i%5==0) :
 			sum+=i
 	return sum
-
-
-def isLeapYear(year) :
-	if (year%4==0) and (year%100!=0 or year%400==0) :
-		return True
-	return False
 
 
 
