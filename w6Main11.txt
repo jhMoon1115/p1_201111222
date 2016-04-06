@@ -1,0 +1,21 @@
+﻿@startuml
+
+title Multiples 3 and 5 - Activity Diagram 
+
+
+start
+:input year;
+if(year is devided by 4?) then(yes)
+    if(year is not devided by 100) then(yes)
+        :print "Leap year";
+    else if(year is devided by 400) then(yes)
+        :print "Leap year";
+    else
+        :print "Not Leap year";
+    endif
+else
+    :print "Not Leap year";
+endif
+stop
+
+@enduml
