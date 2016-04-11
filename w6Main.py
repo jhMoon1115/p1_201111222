@@ -103,7 +103,7 @@ def lab6_2() :
 	print "You get the right answer at {0:d} times.".format(upAndDownGame(answer))
 
 """
-@author mjg
+@author mjh
 @since 0411
 """
 
