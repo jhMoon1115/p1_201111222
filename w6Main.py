@@ -99,15 +99,52 @@ def lab6_1() :
 
 def lab6_2() :
 	print "\nUp and Down Game"
-	answer=int(raw_input("input one number"))
+	answer=int(raw_input("input one number "))
 	print "You get the right answer at {0:d} times.".format(upAndDownGame(answer))
+
+"""
+@author mjg
+@since 0411
+"""
+
+def sumList(list) :
+	"""
+	sum of Elements of list function
+	
+	parameters
+	----------
+	arg1 : list
+		list
+
+	returns
+	-------
+	int 
+		sum
+
+	Examples
+	--------
+	sumList([1,2,3,4,5])
+	"""
+	sum=0
+	for i in list :
+		sum+=i
+	return sum
+
+def lab6_3() :
+	print "\nSum of List : ",
+	x=list()
+	for i in range(1, 1001) :
+		if(i%4==0 and i%5!=0) :
+			x.append(i)
+	sum=sumList(x)
+	print sum
 
 def main() :
 	lab6()
 	lab6_1()
 	lab6_2()
+	lab6_3()
 
 if __name__=="__main__" :
 	main()
 
-	
