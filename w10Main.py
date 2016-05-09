@@ -62,12 +62,11 @@ def lab10_10() :
 	print "* Rate of Milk : {0}".format(cntMilk/len(pList))
 
 def lab10_11() :
-	scores=[["English", 100], ["Math", 200], ["English", 200], ["Math", 200],["English", 
-
-100], ["Math", 300]] 
+	scores=[["English", 100], ["Math", 200], ["English", 200], ["Math", 200],["English", 100], ["Math", 300]] 
 	sum=0
 	for score in scores :
 		sum+=score[1]
+	print "\n==Main 11=="
 	print "Total Sum of Scores : ", sum
 	print "Average of Scores : ", sum/len(scores)
 
