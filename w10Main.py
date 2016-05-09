@@ -61,10 +61,64 @@ def lab10_10() :
 			cntMilk+=1
 	print "* Rate of Milk : {0}".format(cntMilk/len(pList))
 
+def lab10_11() :
+	scores=[["English", 100], ["Math", 200], ["English", 200], ["Math", 200],["English", 
+
+100], ["Math", 300]] 
+	sum=0
+	for score in scores :
+		sum+=score[1]
+	print "Total Sum of Scores : ", sum
+	print "Average of Scores : ", sum/len(scores)
+
+def getDicOfCntWord(wList) :
+	dic=dict()
+	for i in wList :
+		if i not in dic :
+			dic.update({i : 1})
+		else :
+			dic[i]+=1
+	return dic
+
+def getMaxCnt(dic) :
+	max=0
+	word=""
+	for i in dic :
+		if max<dic[i] :
+			max=dic[i]
+			word=i
+	return word, max
+
+def getMaxWord(dic, howMany) :
+	mDic=dic
+	mList=list()
+	re=0
+	for i in range(howMany) :
+		re=getMaxCnt(mDic)
+		mList.append(re)
+		del mDic[re[0]]
+	return mList
+
+def lab10_12() :
+	letItBe="When I find myself in times of trouble Mother Mary comes to me Speaking words of wisdom let it be And in my hour of darkness She is standing right in front of me Speaking words of wisdom let it be Let it be let it be Let it be let it be Whisper words of wisdom let it be And when the broken-hearted people Living in the world agree There will be an answer let it be For though they may be parted There is still a chance that they will see There will be an answer let it be Let it be let it be Let it be let it be Yeah there will be an answer let it be Let it be let it be Let it be let it be Whisper words of wisdom let it be Let it be let it be Ah let it be yeah let it be Whisper words of wisdom let it be And when the night is cloudy There is still a light that shines on me Shine on until tomorrow let it be I wake up to the sound of music Mother Mary comes to me Speaking words of wisdom let it be Let it be let it be Let it be yeah let it be Oh there will be an answer let it be Let it be let it be Let it be yeah let it be Whisper words of wisdom let it be"
+	wList=letItBe.lower().split()
+	dic=getDicOfCntWord(wList)
+	re=getMaxWord(dic, 5)
+	print "\n==Main 12=="
+	print "The five words that the most many in \'Let it be\'"
+	for i in re :
+		print i[0], " - ", i[1]	
+	#import collections
+	#mDic=collections.Counter(letItBe.lower().split())
+	#mRe=mDic.most_common(5)
+	#print mRe
+
 def main() :
 	lab10_8()
 	lab10_9()
 	lab10_10()
+	lab10_11()
+	lab10_12()
 
 if __name__=="__main__" :
 	main()
