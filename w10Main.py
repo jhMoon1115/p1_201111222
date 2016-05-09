@@ -51,10 +51,20 @@ def lab10_9() :
 	plt.bar(range(len(gu)), gu)
 	plt.show()
 
+def lab10_10() :
+	allData=[['Coffee', 'Water', 'Milk', 'Icecream'],['Espresso', 'No', 'No', 'No'],["Long Black", "Yes", "No", "No"],["Flat White", "No", "Yes", "No"],["Cappuccino", "No", "Yes - Frothy", "No"],["Affogato", "No", "No", "Yes"]]
+	pList=allData[1:]
+	print "==Main 10=="
+	cntMilk=0.
+	for item in pList :
+		if "YES" in item[2].upper() :
+			cntMilk+=1
+	print "* Rate of Milk : {0}".format(cntMilk/len(pList))
+
 def main() :
 	lab10_8()
 	lab10_9()
-
+	lab10_10()
 
 if __name__=="__main__" :
 	main()
