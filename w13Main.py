@@ -45,7 +45,7 @@ def lab13_5() :
 def getCoordsFromFile(aFile) :
 	coords=list()
 	try :
-		f=open('coords.txt', 'r')
+		f=open(aFile, 'r')
 	except IOError as e :
 		print e
 	else :
