@@ -16,13 +16,13 @@ class Maltese(Dog) :
 		
 
 def lab14_1() :
-	print "Dog talk .."
 	mydog=Dog('choco')
+	print "Dog talk .."
 	mydog.talk()
 	print "Shitzu talk .."
 	s=Shitzu('shi')
 	s.talk()
-	print "Martis talk .."
+	print "Maltese talk .."
 	m=Maltese('malt')
 	m.talk()
 
